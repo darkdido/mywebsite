@@ -13,7 +13,7 @@
 						                   <key>url</key>
 						                   <string>https://cdn.i3rby.com/out/minecraftSigned.ipa</string>
 						               </dict>
-						   		    			          	<dict>
+								<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
@@ -35,7 +35,7 @@
 						               <key>kind</key>
 						               <string>software</string>
 						               <key>title</key>
-									<string>Minecraft
+																				               <string>Minecraft
 
 Thank You 😊
 
