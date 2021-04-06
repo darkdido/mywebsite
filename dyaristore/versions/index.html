@@ -289,9 +289,14 @@ margin-top: 17.3px;
 <header>
 	<div class="form">
 		<a onClick="location.reload()">
-		<img class="imgq" src="/dyaristore/img/refresh.png" style="height: 80px;">
+		<img onclick="audio.play()" class="imgq" src="/dyaristore/img/refresh.png" style="height: 80px;">
 		</a>
-	
+	<script>
+var audio = new Audio("https://www.dyari.ml/dyaristore/versions/btnsoundeffect/buttononclick.mp3");
+audio.oncanplaythrough = function(){
+	audio.play();
+}
+		</script>
 	<a class="modal-btn" href="#">
 		<img class="modal-btn" style="height: 80px;" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Info_icon-72a7cf.svg"></a>
 	 <div class="modal-bg">
