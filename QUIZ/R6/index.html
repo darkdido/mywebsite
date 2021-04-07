@@ -89,9 +89,15 @@ p
             <h1>WELCOME</h1>
             <p>Choose one ..?</p>
             <br>
-            <a href="Questions/question1.html" class="btn">R6</a>
+            <a onclick="audio.play()" href="Questions/question1.html" class="btn">R6</a>
             <a onclick="alert('soon..')" href="#" class="btn">Fortnite</a>
             <a  onclick="alert('soon will be available...')" href="#" class="btn">Warzone</a><br/><br/><br/><br/><br/>
             <a onclick="alert('Dwaye De Kaka')" href="#" class="btn">Soon</a>
+            <script>
+var audio = new Audio("https://www.dyari.ml/dyaristore/versions/btnsoundeffect/buttonclick.mp3");
+audio.oncanplaythrough = function() {
+    audio.play();
+}
+                </script>
 </body>
 </html>
