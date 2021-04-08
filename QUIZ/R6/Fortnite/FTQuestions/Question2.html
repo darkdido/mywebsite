@@ -10,7 +10,7 @@ document.getElementById("demo").innerHTML = "<span style='color: #1BC300;'>You W
 
               }
               function two(){
-              var newButton = '<button class="btn9" onclick="two()", location:Question2.html>Next Question</button>';
+              var newButton = '<button class="btn9" onclick="two()">Next Question</button>';
 document.getElementById("b").innerHTML=""+newButton;
               }                
 </script>
@@ -64,7 +64,7 @@ font-weight: bold;
 }
 .btn1:hover
 {
-    background: red;
+    background: green;
 
     border: 2px solid white;
 }
@@ -122,7 +122,7 @@ font-weight: bold;
 .btn4:hover
 {
     
-    background: green;
+    background: red;
     border: 2px solid white;
 }
 p{
@@ -182,14 +182,14 @@ p{
 <br>
     <div class="form">
                     <h1>Fortnite | QUIZ</h1>
-                    <p>چەند سکین لە یاری فۆڕتنایت ھەیە ؟</p>
+                    <p>کامە لەم سکینانە Rare نیە ..؟</p>
                     <br>
                    
-                    <a  onclick="audio.play()" href="QuestionfailED.html" class="btn1">10</a>
-                    <a onclick="audio.play()"  href="QuestionFailed.html" class="btn2">50</a><br/><br/>
+                    <a  onclick="snd.play(), myFunction(), two()" href="QuestionfailED.html" class="btn1">Early Grey</a>
+                    <a onclick="audio.play()"  href="QuestionFailed.html" class="btn2">Skull Trooper</a><br/><br/>
                     <br>
-                    <a onclick="audio.play()" href="QuestionFailed.html" class="btn3">100</a>
-                    <a onclick="snd.play(), myFunction(), two()" class="btn4">زیاتر لە : 160</a>
+                    <a onclick="audio.play()" href="QuestionFailed.html" class="btn3">The Reaper</a>
+                    <a onclick="audio.play()" class="btn4">Double Helix</a>
                     </div>
                     <script>
 var audio = new Audio("https://dyari.ml/dyaristore/versions/btnsoundeffect/fart.mp3");
