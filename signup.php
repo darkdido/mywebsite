@@ -1,188 +1,106 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-    h2
-    {
-      color: black;
-      font-size: 3.2em;
-      font-weight: bold;
-      font-family: 'arial';
-    }
-body {
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
-
-*{
-  font-family: sans-serif;
-  box-sizing: border-box;
-}
-
-.form {
-  width: 800px;
-  border: 2px solid #ccc;
-  padding: 150px;
-   box-shadow: 15px 15px #898989;
-  background: #fff;
-  border-radius: 15px;
-
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-input {
-  display: block;
-  border: 2px solid #ccc;
-  width: 95%;
-  font-size: 3em;
-  font-family: 'arial';
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 5px;
-}
-label {
-  font-family: 'arial';
-  color: black;
-  font-size: 2.5em;;
-  padding: 10px;
-}
-
-button {
- 
-  background: #555;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 2.9em;
-  color: #fff;
-  border-radius: 10px;
-  margin-right: 10px;
-  border: none;
-}
-button:hover{
-  opacity: .7;
-}
-.error {
-   background: #F2DEDE;
-   color: #A94442;
-   padding: 10px;
-   width: 95%;
-   font-size: 3em;
-   border-radius: 5px;
-   margin: 20px auto;
-}
-
-.success {
-   background: #D4EDDA;
-   color: #40754C;
-   padding: 10px;
-   width: 95%;
-   font-size: 3em;
-   border-radius: 5px;
-   margin: 20px auto;
-}
-
-h1 {
-  text-align: center;
-  color: #fff;
-}
-
-.ca {
-  font-size: 14px;
-  display: inline-block;
-  padding: 10px;
-  text-decoration: none;
-  color: #444;
-}
-.ca:hover {
-  text-decoration: underline;
-} 
-a
-{
-  font-family: 'arial';
-  color: black;
-  font-size: 2.7em;
-  text-align: center;
-  text-decoration: none;
-}
-.hama
-{
-     
-    
-     align-items: center;
-     justify-content: space-between;
-}
-          </style>
-	<title>SIGN UP</title>
-
+	<title>Signup</title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<style>
+	body{
+		overflow-x: hidden;
+	}
+	.main-content{
+		width: 50%;
+		height: 40%;
+		margin: 10px auto;
+		background-color: #fff;
+		border: 2px solid #e6e6e6;
+		padding: 40px 50px;
+	}
+	.header{
+		border: 0px solid #000;
+		margin-bottom: 5px;
+	}
+	.well{
+		background-color: #187FAB;
+	}
+	#signup{
+		width: 60%;
+		border-radius: 30px;
+	}
+
+</style>
 <body>
-     <form action="signup-check.php" method="post">
-      <div class="form">
-     	<h2>دروستکردنی ئەکاونت</h2>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="well">
+			<center><h1 style="color: white;">DyariBook</h1></center>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="main-content">
+			<div class="header">
+				<h3 style="text-align: center;"><strong>Join DyariBook</strong></h3>
+				<hr>
+			</div>
+			<div class="l-part">
+				<form action="" method="post">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+						<input type="text" class="form-control" placeholder="First Name" name="first_name" required="required">
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+						<input type="text" class="form-control" placeholder="First Name" name="last_name" required="required">
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input id="password" type="password" class="form-control" placeholder="Password" name="u_pass" required="required">
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input id="email" type="email" class="form-control" placeholder="Email" name="u_email" required="required">
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
+						<select class="form-control" name="u_country" required="required">
+							<option disabled>Select your Country</option>
+							<option>Iraq</option>
+                            <option>Pakistan</option>
+							<option>United States of America</option>
+							<option>India</option>
+							<option>Japan</option>
+							<option>UK</option>
+							<option>France</option>
+							<option>Germany</option>
+						</select>
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
+						<select class="form-control input-md" name="u_gender" required="required">
+							<option disabled>Select your Gender</option>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Others</option>
+						</select>
+					</div><br>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<input type="date" class="form-control input-md" placeholder="Email" name="u_birthday" required="required">
+					</div><br>
+					<a style="text-decoration: none;float: right;color: #187FAB;" data-toggle="tooltip" title="Signin" href="signin.php">Already have an account?</a><br><br>
 
-     	<?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
-     	<?php } ?>
-
-          <?php if (isset($_GET['success'])) { ?>
-               <p class="success"><?php echo $_GET['success']; ?></p>
-          <?php } ?>
-
-          <label>ناو</label>
-          <?php if (isset($_GET['name'])) { ?>
-               <input type="text" 
-                      name="name" 
-
-                      placeholder="ناو"
-                      value="<?php echo $_GET['name']; ?>"><br>
-          <?php }else{ ?>
-               <input type="text" 
-                      name="name" 
-                      placeholder="ناو"><br>
-          <?php }?>
-
-          <label>یوزەر نەیم</label>
-          <?php if (isset($_GET['uname'])) { ?>
-               <input type="text" 
-                      name="uname" 
-                      data-mask="999 999 999"
-                      placeholder="یوزەر نەیم"
-                      value="<?php echo $_GET['uname']; ?>"><br>
-          <?php }else{ ?>
-               <input type="text" 
-              
-                      name="uname" 
-                      placeholder="یوزەر نەیم"><br>
-          <?php }?>
-
-
-     	<label>پاسوۆرد</label>
-     	<input type="password" 
-                 name="password" 
-                 placeholder="پاسوۆرد"><br>
-
-          <label>ھەمان پاسوۆرد</label>
-          <input type="password" 
-                 name="re_password" 
-                 placeholder="ھەمان پاسوۆرد"><br>
-
-<br>
-
-<center>
-     	<button type="submit">دروستکردنی ئەکاونت</button>
-          <br>
-          <br>
-          <a href="index.php">ئەکاونتت ھەیە؟</a>
-     </center>
-     </form>
+					<center><button id="sign_up" class="btn btn-info btn-lg" name="sign_up">Signup</button></center>
+					<?php include("insert_user.php"); ?>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

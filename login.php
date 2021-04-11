@@ -1,52 +1,23 @@
-<?php 
-session_start(); 
-include "db_conn.php";
+<?php
+session_start();
 
-if (isset($_POST['uname']) && isset($_POST['password'])) {
+include("includes/connection.php");
 
-	function validate($data){
-       $data = trim($data);
-	   $data = stripslashes($data);
-	   $data = htmlspecialchars($data);
-	   return $data;
-	}
+if(isset($_POST['login']))
+{
+    $email = htmlentities(mysqli_real_escape_string($con, $_POST['email']));
+    $pass = htmlentities(mysqli_real_escape_string($con, $_POST['pass']));
 
-	$uname = validate($_POST['uname']);
-	$pass = validate($_POST['password']);
+    $select_user = "select * from users where user_email='$email' AND user_pass='$pass' AND status='verified'";
+    $query= mysqli_query($con, $select_user);
+    $check_user = mysqli_num_rows($query);
 
-	if (empty($uname)) {
-		header("Location: index.php?error=یوزەر نەیم پێویستە");
-	    exit();
-	}else if(empty($pass)){
-        header("Location: index.php?error=پاسوۆرد پێویستە");
-	    exit();
-	}else{
-		
+    if($check_user == 1){
+        $_SESSION['user_email'] = $email;
 
-        
-		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
-
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['user_name'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['user_name'] = $row['user_name'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location: home.php");
-		        exit();
-            }else{
-				header("Location: index.php?error= ddd");
-		        exit();
-			}
-		}else{
-			header("Location: index.php?error=یوزەر نەیم یان پاسوۆرد ھەڵەیە");
-	        exit();
-		}
-	}
-	
-}else{
-	header("Location: index.php");
-	exit();
+        echo "<script>window.open('home.php', '_self')</script>";
+    }else
+    {
+        echo "<script>alert('Your Email Or Password Is Incorrect')</script>";
+    }
 }
